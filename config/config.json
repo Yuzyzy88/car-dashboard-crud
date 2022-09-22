@@ -1,23 +1,41 @@
 {
   "development": {
-    "username": "username",
-    "password": "password",
-    "database": "cars_db",
-    "host": ":memory:",
-    "dialect": "sqlite"
+    "username": "yklvtteqyhljfl",
+    "password": "917cfe0627265a6033bb7c266d7c5d6ba62bb228de2a8319802aee781b87f4b9",
+    "database": "d5gtd6m7vi4oes",
+    "host": "ec2-44-210-228-110.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   },
   "test": {
-    "username": "postgres",
-    "password": "password",
-    "database": "cars_db",
-    "host": ":memory:",
-    "dialect": "sqlite"
+    "username": "yklvtteqyhljfl",
+    "password": "917cfe0627265a6033bb7c266d7c5d6ba62bb228de2a8319802aee781b87f4b9",
+    "database": "d5gtd6m7vi4oes",
+    "host": "ec2-44-210-228-110.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   },
   "production": {
     "username": "yklvtteqyhljfl",
     "password": "917cfe0627265a6033bb7c266d7c5d6ba62bb228de2a8319802aee781b87f4b9",
     "database": "d5gtd6m7vi4oes",
     "host": "ec2-44-210-228-110.compute-1.amazonaws.com",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
