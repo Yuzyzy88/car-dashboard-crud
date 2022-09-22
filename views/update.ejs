@@ -1,0 +1,77 @@
+<div class="main-pages">
+    <!-- Banner -->
+    <div class="banner" style="margin-top: 32px; margin-left: 10px;">
+        <p><b>Cars > </b><a href="/" style="color: black;">
+                <b>List Car ></b></a><small> Update Car Information</small></p>
+        <h3 class="title mt-4">Update Car Information</h3>
+    </div>
+
+    <!-- form -->
+    <form enctype="multipart/form-data">
+        <div class="form">
+            <div class="row mb-3">
+                <label for="name" class="col-sm-2 col-form-label nav-txt">Name
+                    <span style="color: red;">&#42;</span>
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control input-form" id="name" class="name" name="name" required
+                        value="<%= data.name ? data.name : ''%>" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="price" class="col-sm-2 col-form-label nav-txt">Rent<span
+                        style="color: red;">&#42;</span></label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control input-form" id="price" name="price" required
+                        value="<%= data.price ? data.price : '' %>">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="size" class="col-sm-2 col-form-label nav-txt">Size<span>&#42;</span></label>
+                <div class="col-sm-10">
+                    <select class="form-select input-form" id="size" name="size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="file" class="col-sm-2 col-form-label nav-txt">Foto<span
+                        style="color: red;">&#42;</span></label>
+                <div class="col-sm-10 file-upload">
+                    <div class="file-input input-form">
+                        <input type="file" name="image" class="file" accept="image/*" id="file"
+                            value="<%= data.image ? data.image : ''%>" required />
+                    </div>
+                    <small style="color: #8A8A8A;">File size max. 2MB</small>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 350px;">
+            <a href="/" type="button" class="btn search-btn general-txt">Cancel</a>
+            <button class="btn add-btn general-txt" id="save">Save</button>
+        </div>
+
+    </form>
+
+    <script type="text/javascript" defer>
+        let savebtn = document.getElementById('save');
+        savebtn.onclick = async (event) => {
+            event.preventDefault();
+            let formdata = new FormData();
+            formdata.append('name', document.getElementById('name').value);
+            formdata.append('price', document.getElementById('price').value);
+            formdata.append('size', document.getElementById('size').value);
+            formdata.append('image', document.getElementById('file').files[0]);
+
+            await axios.put('/api/cars/update/<%= data.id %>', formdata);
+            window.location.href = "/"
+        }
+    </script>
+</div>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title %>
+    </title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+        integrity="sha512-VZ6m0F78+yo3sbu48gElK4irv2dzPoep8oo9LEjxviigcnnnNvnTOJRSrIhuFk68FMLOpiNz+T77nNY89rnWDg=="
+        crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="/assets/app/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/dist/css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-light bg-light py-1">
+            <div class="container-fluid" style="background-color: #ffffff;">
+
+                <button class="btn btn-default" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><i><img src="/images/Group15.svg" alt=""></i>
+                </button>
+
+                <img src="/images/Rectangle62.svg" alt="" class="horizontal-nav">
+                <button class="btn btn-default" id="btn-slider" type="button">
+                    <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+                </button>
+
+
+                <div class="profile collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <!-- search box -->
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn general-txt search-btn" type="submit"
+                            style="margin-right: 30px;">Search</button>
+                    </form>
+
+                    <!-- Profile -->
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+                        <img src="/images/Group15.svg" alt="" class="icon-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Unis Badri
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="slider" id="sliders">
+            <div class="slider-head text-center py-2">
+                <img src="/images/Rectangle63.svg" alt="">
+            </div>
+
+            <div class="slider-body px-1">
+                <nav class="nav flex-column text-center">
+                    <a class="nav-link py-3 active" href="#">
+                        <img src="/images/Group2.svg" alt=""><br>
+                        <small>Dashboard</small>
+                    </a>
+
+                    <div class="nav-item dropdown-submenu active">
+                        <a class="nav-link py-3  active" href="#">
+                            <img src="/images/fi_truck.svg" alt=""><br>
+                            <small>cars</small>
+                        </a>
+                        <ul class="dropdown-menu mn-vnavigation">
+                            <li class="nav-item nav-link general-txt"><a href="#">CARS</a></li>
+                            <li class="nav-item nav-link general-txt"><a href="#">List Car</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <%- body %>
+    </div>
+
+    <div class="slider-background" id="sliders-background"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="/dist/js/jquery.js"></script>
+    <script src="/assets/app/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/dist/js/index.js"></script>
+
+</body>
+
+</html>

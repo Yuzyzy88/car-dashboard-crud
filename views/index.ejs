@@ -1,0 +1,115 @@
+<div class="main-pages">
+    <!-- Banner -->
+    <div class="banner" style="margin-top: 32px; margin-left: 10px;">
+        <p><b>Cars ></b> <small>List Car</small></p>
+        <div class="row mt-4 " style="margin-right: 10px;">
+            <div class="col m-0">
+                <h3 class="title">List Car</h3>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <a href="/add"><button type="button" class="btn add-btn general-txt">+ Add New Car</button></a>
+            </div>
+        </div>
+    </div>
+
+    <% if (data.length===0) { %>
+        <tr>
+            <td colspan="6">
+                <div class="alert alert-danger" role="alert">
+                    Data not exist
+                </div>
+            </td>
+        </tr>
+        <% } %>
+
+
+            <!-- delete confirm -->
+            <!-- <script>
+                $(document).ready(function () {
+                    $('.click').click(function () {
+                        $('popup-box').css("display", "block");
+                    });
+
+                    $('.btn1').click(function () {
+                        $('popup-box').css("display", "block");
+                    });
+                });
+            </script> -->
+
+            <!-- <div class="popup-box col-lg-3">
+        <div class="card text-center" style="padding: 30px 16px;">
+            <div>
+                <img src="/images/img-BeepBeep.svg" alt="" width="153px" style="text-align:center">
+            </div>
+            <p>Menghapus Data Mobil</p>
+            <p>Setelah dihapus, data mobil tidak dapat dikembalikan. Yakin ingin menghapus?</p>
+            <div class="mx-5 d-flex justify-content-around" style="padding:0px 20px;">
+                <a href="/delete/">
+                    <button type="button" class="btn add-btn general-txt" style="width: 87px;">Ya</button>
+                </a>
+                <a href="/" class="btn1">
+                    <button class="btn search-btn general-txt" style="width: 87px;">Tidak</button>
+                </a>
+            </div>
+        </div>
+    </div> -->
+
+            <!-- filter button -->
+            <div class="mt-4" style="margin-left: 10px;">
+                <button type="button" class="btn opt-btn general-txt">All</button>
+                <button type="button" class="btn opt-btn general-txt">Small</button>
+                <button type="button" class="btn opt-btn general-txt">Medium</button>
+                <button type="button" class="btn opt-btn general-txt">Large</button>
+            </div>
+
+            <!-- catalog -->
+            <div class="row m-0">
+                <!-- <% data.forEach(car=> { %>
+
+            <!-- card car -->
+                <div class="col-12 col-lg-3 mt-4">
+                    <div class="card" style="padding: 30px 16px;">
+                        <div style="display: contents;">
+                            <img src="/images/<%= car.image  %> " alt="" width="100%" height="300px">
+                        </div>
+
+                        <div class="pt-5">
+                            <p class="card2-txt">
+                                <%= car.name %>
+                            </p>
+                            <p class="card-title">
+                                <%= car.price %>
+                            </p>
+                            <p class="card-txt"><img src="/images/fi_clock.svg" alt="">
+                                <%= car.size %>
+                            </p>
+                        </div>
+
+                        <div class="pt-3 d-flex justify-content-around">
+                            <button type="button" class="btn btn-outline-danger" style="width: 143px; height: 48px;"
+                                onclick="deleteCar( <%=car.id%> )">
+                                <img src="/images/fi_trash-2.svg" alt="">Delete
+                            </button>
+
+
+                            <a href="/cars/<%=car.id%>" style="color: #ffffff;">
+                                <button type="button" class="btn btn btn-success"
+                                    style="width: 143px; height: 48px;"><img src="/images/fi_edit.svg" alt="">
+                                    Edit
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+
+            <script type="text/javascript" defer>
+                async function deleteCar(id) {
+                    console.log(id)
+                    await axios.delete(`/api/cars/delete/${id}`);
+                    window.location.href = "/";
+                }
+            </script>
+
+</div>
