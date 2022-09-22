@@ -1,17 +1,17 @@
 {
   "development": {
-    "username": "postgres",
+    "username": "username",
     "password": "password",
     "database": "cars_db",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "host": ":memory:",
+    "dialect": "sqlite"
   },
   "test": {
     "username": "postgres",
     "password": "password",
     "database": "cars_db",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "host": ":memory:",
+    "dialect": "sqlite"
   },
   "production": {
     "username": "yklvtteqyhljfl",
