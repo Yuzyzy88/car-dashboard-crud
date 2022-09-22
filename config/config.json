@@ -14,10 +14,10 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "postgres",
-    "password": "password",
-    "database": "cars_db",
-    "host": "127.0.0.1",
+    "username": "yklvtteqyhljfl",
+    "password": "917cfe0627265a6033bb7c266d7c5d6ba62bb228de2a8319802aee781b87f4b9",
+    "database": "d5gtd6m7vi4oes",
+    "host": "ec2-44-210-228-110.compute-1.amazonaws.com",
     "dialect": "postgres"
   }
 }
